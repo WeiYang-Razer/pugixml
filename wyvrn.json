@@ -1,9 +1,9 @@
 {
   "name": "pugixml",
-  "version": "0.0.0.0",
+  "version": "1.16.0.0",
   "schemaVersion": 2,
   "kind": "StaticLib",
-  "description": "TODO: one-line description of pugixml",
+  "description": "Light-weight, simple and fast XML parser for C++ with XPath support",
   "dependencies": {},
   "build": {
     "system": "cmake",
@@ -14,7 +14,10 @@
       "MinSizeRel"
     ],
     "configure": [
-      "-DPUGIXML_BUILD_TESTS=OFF"
+      "-DPUGIXML_BUILD_TESTS=OFF",
+      "-DCMAKE_DEBUG_POSTFIX=d",
+      "-DCMAKE_RELWITHDEBINFO_POSTFIX=rd",
+      "-DCMAKE_MINSIZEREL_POSTFIX=msr"
     ],
     "installDir": "install"
   }
